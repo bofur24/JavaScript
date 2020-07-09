@@ -87,7 +87,7 @@ console.log(typeof x);
 
 /************************************
  * Operators precedence
- */
+
  
   var now = 2020;
   var yearJohn = 1989;
@@ -122,3 +122,53 @@ console.log(x);
 //x = x + 1
 x++
 console.log(x);
+ */
+
+ /************************************
+ * If / else statements
+*/
+
+var firstName = 'John';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will hopefully marry soon :)');
+}
+
+var isMarried = true;
+
+if (isMarried) {
+  console.log(firstName + ' is married!');
+} else {
+  console.log(firstName + ' will hopefully marry soon :)');
+}
+
+var markHeight, johnHeight, markMass, johnMass, markBMI, johnBMI, compareBMI;
+markHeight = 5.10;
+johnHeight = 5.11;
+markMass = 200;
+johnMass = 250;
+
+markBMI = markMass / (markHeight * markHeight);
+johnBMI = johnMass / (johnHeight * johnHeight);
+
+console.log("Mark's BMI " + markBMI);
+console.log("John's BMI " + johnBMI);
+compareBMI = markBMI > johnBMI;
+
+
+if (markBMI > johnBMI) {
+  console.log('Mark\'s BMI is higher than John\'s BMI. ')
+} else {
+  console.log('John\'s BMI is higher than Mark\'s BMI. ')
+}
+
+
+
+
+
+
+
+
