@@ -34,6 +34,7 @@ if(mikesTeamAvg > johnsTeamAvg) {
 }else {
     console.log('Mike VS John: Johns team average wins ' + johnsTeamAvg + ' to Mikes team average ' + mikesTeamAvg) 
 }
+// Didn't not do the draw in my answer.
 console.log('');
 if(mikesTeamAvg > johnsTeamAvg && mikesTeamAvg > marysTeamAvg) {
     console.log('Mike VS John VS Mary: Mikes team average wins ' + mikesTeamAvg)
@@ -42,3 +43,35 @@ if(mikesTeamAvg > johnsTeamAvg && mikesTeamAvg > marysTeamAvg) {
 }else {
     console.log('Mike VS John VS Mary: Marys team average wins ' + marysTeamAvg)
 }
+
+/*************************************
+ * CODING CHALLENGE 2 Solution
+ */
+
+var scoreJohn = (89 + 120 + 103) / 3;
+var scoreMike = (129 + 94 + 123) / 3;
+var scoreMary = (97 + 134 + 105) / 3;
+console.log('');
+console.log(scoreJohn, scoreMike, scoreMary);
+
+if(scoreJohn > scoreMike && ScoreJohn > scoreMary) {
+ console.log('John\'s team wins with ' + scoreJohn + ' points'); 
+} else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
+    console.log('Mike\'s team wins with ' + scoreMike + ' points');
+} else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+    console.log('Mary\'s team wins with ' + scoreMary + ' points');
+}else {
+   console.log('There is a draw'); 
+}
+
+
+
+//  if (scoreJohn > scoreMike) {
+//      console.log('John\'s team wins with ' + scoreJohn + ' points');
+//  }else if (scoreMike > scoreJohn) {
+//     console.log('Mike\'s team wins with ' + scoreMike + ' points');
+//  }else {
+//      console.log('There is a draw');
+//  }
+
+
