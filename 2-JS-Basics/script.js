@@ -269,30 +269,30 @@ console.log(x);
  * Functions
 */
 
-function calculateAge(birthYear) {
-  return 2018 - birthYear;
-}
+// function calculateAge(birthYear) {
+//   return 2018 - birthYear;
+// }
 
-var ageJohn = calculateAge(1990);
-var ageMike = calculateAge(1948);
-var ageJane = calculateAge(1969);
-console.log(ageJohn, ageMike, ageJane);
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+// console.log(ageJohn, ageMike, ageJane);
 
-function yearsUntilRetirement(Year, firstName) {
-  var age = calculateAge(Year);
-  var retirement = 65 - age;
+// function yearsUntilRetirement(Year, firstName) {
+//   var age = calculateAge(Year);
+//   var retirement = 65 - age;
 
-  if (retirement > 0) {
-    console.log(firstName + ' retire in ' + retirement + ' years.')
-  } else  {
-    console.log(firstName + ' is already retired.')
-  }
+//   if (retirement > 0) {
+//     console.log(firstName + ' retire in ' + retirement + ' years.')
+//   } else  {
+//     console.log(firstName + ' is already retired.')
+//   }
    
-}
+// }
 
-yearsUntilRetirement(1990, 'John');
-yearsUntilRetirement(1948, 'Mike');
-yearsUntilRetirement(1969, 'Jane');
+// yearsUntilRetirement(1990, 'John');
+// yearsUntilRetirement(1948, 'Mike');
+// yearsUntilRetirement(1969, 'Jane');
 
  /************************************
  * Function Statements and expressions
@@ -305,19 +305,55 @@ yearsUntilRetirement(1969, 'Jane');
 
 
 // Function expression
-var whatDoYouDo = function(job, firstName) {
-    switch(job) {
-      case 'teacher':
-        return firstName + ' teaches kids how to code.';
-      case 'driver':
-        return firstName + ' drives a cab in Lisbon.';
-      case 'designer':
-        return firstName + ' designs beautiful websites.';
-      default:
-        return firstName + ' does someting else.';
-    } 
-}
+// var whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//       case 'teacher':
+//         return firstName + ' teaches kids how to code.';
+//       case 'driver':
+//         return firstName + ' drives a cab in Lisbon.';
+//       case 'designer':
+//         return firstName + ' designs beautiful websites.';
+//       default:
+//         return firstName + ' does someting else.';
+//     } 
+// }
 
-console.log(whatDoYouDo('teacher', 'Mikes'));
-console.log(whatDoYouDo('designer', 'Jane'));
-console.log(whatDoYouDo('retired', 'Mark'));
+// console.log(whatDoYouDo('teacher', 'Mikes'));
+// console.log(whatDoYouDo('designer', 'Jane'));
+// console.log(whatDoYouDo('retired', 'Mark'));
+
+ /************************************
+ * Arrays
+*/
+
+// Array of names - 0 based
+//Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+
+console.log(names)
+console.log(names[0]);
+console.log(names.length);
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Dirrerent data types
+
+var john = ['John,', 'Smith', 1990, 'Teacher', false];
+john.push('Blue'); // add to the end
+john.unshift('Mr'); // add to the start
+console.log(john);
+
+john.pop() // remove from the end
+john.shift() // remove from the start
+console.log(john);
+
+console.log(john.indexOf(1990)); // in array location 2
+console.log(john.indexOf('designer')) //-1 not in arrary
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
