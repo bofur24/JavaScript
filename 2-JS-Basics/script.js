@@ -265,3 +265,31 @@ console.log(x);
 //   console.log('The == operator does type coercion!');
 // }
 
+ /************************************
+ * Functions
+*/
+
+function calculateAge(birthYear) {
+  return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(Year, firstName) {
+  var age = calculateAge(Year);
+  var retirement = 65 - age;
+
+  if (retirement > 0) {
+    console.log(firstName + ' retire in ' + retirement + ' years.')
+  } else  {
+    console.log(firstName + ' is already retired.')
+  }
+   
+}
+
+yearsUntilRetirement(1990, 'John');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
