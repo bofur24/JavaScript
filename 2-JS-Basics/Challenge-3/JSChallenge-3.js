@@ -38,6 +38,31 @@ console.log('First restaurants bill is ' + restaurantBills[0] + ' and the tip is
 console.log('First restaurants bill is ' + restaurantBills[1] + ' and the tip is ' + tips[1] + ' for a total of ' + paidAmount[1]);
 console.log('First restaurants bill is ' + restaurantBills[2] + ' and the tip is ' + tips[2] + ' for a total of ' + paidAmount[2]);
 
+/*************************************
+ * CODING CHALLENGE 3
+ * Solution
+ 
+ function tipCalculator(bill) {
+      var percentage;
+      if (bill < 50) {
+          percentage = .2;
+      }else if (bill >= 50 && bill < 200) {
+          percentage = .15;
+      }else {
+          percentage = .1
+      }
+      return percentage * bill;
+ }
 
+ var bills = [124, 48, 268];
+ var tips = [tipCalculator(bills[0]),
+             tipCalculator(bills[1]),
+             tipCalculator(bills[2])];
+ 
+var finalvalues = [bills[0] + tips[0],
+                   bills[1] + tips[1],
+                   bills[2] + tips[2]];
+ 
+ */
 
 
